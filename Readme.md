@@ -88,6 +88,7 @@ My maximum team capacity per sprint is = 12. This, I feel, is a realistic target
 
 [Top](#contents)
 # Test Driven Development<a name = "tdd"></a>
+Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: the first thing the developer writes is an initially failing automated test case, then produces the minimum amount of code to pass the test and finally refactors the code to be of an acceptable standard. 
 
 # Test Coverage Metric<a name = "tcm"></a>
 
