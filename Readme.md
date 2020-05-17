@@ -95,3 +95,14 @@ Test-driven development (TDD) is a software development process that relies on t
 # Team Version Control<a name = "tvc"></a>
 
 # Code-review Checklist<a name = "coderev"></a>
+A code review is the process by which software developers examine each other’s code more mistakes, bugs and to estimate the overall quality of the code. Code reviews have been shown to accelerate the software development. 
+
+The reviewed code may contain syntax errors, like an undefined variable or logical errors, where the correct syntax is used but yields incorrect output due to a flaw in the algorithm. 
+
+There are two types of code reviews, static and dynamic. A static code analysis is a method of examining a developer’s code before a program is run. A dynamic code analysis is a method of examining an application during or after a program is run unlike a static code review, there isn't a given set of rules that cover this style.
+
+#### Pull Request Format
+- Enter a title & description for your pull request
+- Each pull request should only address one issue
+- Each commit in the pull request should contain a meaningful commit message
+
