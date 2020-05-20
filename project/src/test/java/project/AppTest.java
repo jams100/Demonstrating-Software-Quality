@@ -55,4 +55,12 @@ public class AppTest {
 
         assertEquals("Questions array should be of length 2 now", 2, survey.getQuestions().size());
     }
+
+    // Test to check that survey response class is created
+    @Test
+    public void createSurveyResponse() {
+        // Creation of a new survey response object
+        SurveyResponse survresp = new SurveyResponse();
+        assertTrue("Should be an object of type survey Response", survresp instanceof SurveyResponse);
+    }
 }
