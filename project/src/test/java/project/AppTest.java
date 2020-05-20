@@ -65,11 +65,21 @@ public class AppTest {
 
     	//Test to see that an answer to a survey response is being added
 	@Test
-	public void responseAnswer()
+	public void responseAnswer() 
 	{
 		SurveyResponse sr = new SurveyResponse();
 		//Setting the ans to survey response
 		sr.setAnswer(1);
 		assertEquals("should return a value showing attibute doesn't = 0" , 1, sr.getAnswer());
+    }
+    
+    //Test to see if response can be obtained from question
+	@Test
+	public void questionResponse()
+	{
+		Question one = new Question("Food Liked");
+		one.getResponse().setAnswer(2);
+
+		assertEquals("Value should = 2", 2, one.getResponse().getAnswer());
 	}
 }
