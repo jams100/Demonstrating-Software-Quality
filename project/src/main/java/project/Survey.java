@@ -17,6 +17,11 @@ public class Survey {
         this.questions = questions;
     }
 
+    // Constructor taking in just a name
+    public Survey(String surveyName) {
+        this.surveyName = surveyName;
+    }
+
     public String getsurvName() {
         return surveyName;
     }
@@ -31,6 +36,11 @@ public class Survey {
 
     public void setQuestions(ArrayList<Question> questions) {
         this.questions = questions;
+    }
+
+    // Method for adding Q's
+    public void add(Question q) {
+        this.questions.add(q);
     }
 
 }
