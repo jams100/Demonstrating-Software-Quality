@@ -81,5 +81,20 @@ public class AppTest {
 		one.getResponse().setAnswer(2);
 
 		assertEquals("Value should = 2", 2, one.getResponse().getAnswer());
+    }
+    
+    //Testing to ensure answer value is between 1-5
+	@Test
+	public void responseValue()
+	{
+		SurveyResponse sr = new SurveyResponse();
+		sr.setAnswer(3);
+		assertEquals("Passing a value between 1-5 so that 0 is NOT being returned", 3, sr.getAnswer());
+
+        sr.setAnswer(-3);
+		assertEquals("Passing a value less than 1-5 so that 0 is returned", 0, sr.getAnswer());
+
+		sr.setAnswer(9);
+		assertEquals("Passing a value greater than 1-5 so that 0 is returned", 0, sr.getAnswer());
 	}
 }
