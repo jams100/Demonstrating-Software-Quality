@@ -43,4 +43,15 @@ public class Survey {
         this.questions.add(q);
     }
 
+    // Method creates list of the repsonses for each question in survey
+    public ArrayList<Integer> getResponses() {
+        ArrayList<Integer> responses = new ArrayList<Integer>();
+
+        // Looping each question in survey
+        for (Question i : this.questions) {
+            int value = i.getResponse().getAnswer();
+            responses.add(value);
+        }
+        return responses;
+    }
 }
