@@ -59,8 +59,17 @@ public class AppTest {
     // Test to check that survey response class is created
     @Test
     public void createSurveyResponse() {
-        // Creation of a new survey response object
         SurveyResponse survresp = new SurveyResponse();
         assertTrue("Should be an object of type survey Response", survresp instanceof SurveyResponse);
     }
+
+    	//Test to see that an answer to a survey response is being added
+	@Test
+	public void responseAnswer()
+	{
+		SurveyResponse sr = new SurveyResponse();
+		//Setting the ans to survey response
+		sr.setAnswer(1);
+		assertEquals("should return a value showing attibute doesn't = 0" , 1, sr.getAnswer());
+	}
 }
