@@ -135,14 +135,37 @@ Version control systems are a category of software tools that help a software te
 3. **Tracing** Being able to trace each change made to the software is particularly useful for identifying the root cause analysis of any bugs etc. Having the history of the code at your fingertips when your reading the code can significantly aid in understanding what a feature is doing and why it is doing it that way. Tracing could be particularly helpful if you were working with legacy code.
 
 # Code-review Checklist<a name = "coderev"></a>
-A code review is the process by which software developers examine each other’s code more mistakes, bugs and to estimate the overall quality of the code. Code reviews have been shown to accelerate the software development. 
+<h3>What is a code review?</h3>
+A code review is a software quality assurance activity in which one or several people check a program mainly by viewing and reading parts of its source code. The main aim of a code review is to eliminate bugs and improve the overall quality of the code. Conducting code reviews have been shown to accelerate the software development process.
 
-The reviewed code may contain syntax errors, like an undefined variable or logical errors, where the correct syntax is used but yields incorrect output due to a flaw in the algorithm. 
+<h3>Detailed code-review checklist</h3>
 
-There are two types of code reviews, static and dynamic. A static code analysis is a method of examining a developer’s code before a program is run. A dynamic code analysis is a method of examining an application during or after a program is run unlike a static code review, there isn't a given set of rules that cover this style.
+1. **Coding best practices**: 
+- Eliminate hard coding, use constraints
+- Comments: Do not write comments for what you are doing but instead why you are doing it
+- Avoid multiple if/else blocks
+- Use framework features, where possible instead of writing custom code
 
-#### Pull Request Format
-- Enter a title & description for your pull request
-- Each pull request should only address one issue
-- Each commit in the pull request should contain a meaningful commit message
+2. **Code Formatting**:
+- Ensure proper naming conventions
+- Use alignments and proper white spacing
+- Ensure code fits into the standard 14-inch laptop screen to eliminate the need for horizontal scrolling
+- Remove unnecessarily commented code
 
+3. **Architecture**:
+- Separation of concerns followed
+  - Split into multiple layers e.g. Presentation, Business and Data layers
+  - Split into respective files e.g. CSS, Javascript, HTML
+- Design patterns: Use appropriate design patterns e.g. Command or Momento pattern depending on the problem and context
+- Code is in sync with existing code patterns/technologies
+
+4. **Non Functional Requirements**:
+- Testability: The code should be easy to test. Refactor into a separate function if required.
+- Reusability: DRY, Do not repeat yourself principal. The same code should not be repeated more than twice. 
+- Extensibility: It should be easy to as enhancements with minimal change to the existing code. One component should be easily replaced by another component. 
+- Reliability: Exception handling and disposing of unused resources.
+- Security: Authentication, authorisation etc. Ensuring access modifiers are private and not public
+
+The above code review checklist is not exhaustive but provides a direction to the code reviewer to conduct effective code reviews and deliver good quality code.
+
+* An example of a [pull request] is (https://github.com/jams100/Demonstrating-Software-Quality/commit/3f670ce1bffcb801b3e9d25edf98bf3201eadd77).
