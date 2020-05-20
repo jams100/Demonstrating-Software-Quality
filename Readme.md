@@ -91,6 +91,26 @@ My maximum team capacity per sprint is = 12. This, I feel, is a realistic target
 Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: the first thing the developer writes is an initially failing automated test case, then produces the minimum amount of code to pass the test and finally refactors the code to be of an acceptable standard. 
 
 # Test Coverage Metric<a name = "tcm"></a>
+EclEmma is a free Java code coverage tool for Eclipse. It brings code coverage analysis directly into the Eclipse workbench. 
+
+- Fast test cycle: Launches from within the workbench like JUnit test runs can directly be analysed for code coverage. 
+- Rich coverage analysis: Coverage results are immediately summarised and highlighted in the Java source code editors.
+- Non-invasive: EclEmma does not require any modifications of your projects or performing any other setup. 
+
+<h3>To Run EclEmma</h1>
+
+<p align="center"><img src="https://i.postimg.cc/CKzYQ4cY/Run.png" width="350" height="50"></p>
+To launch EclEmma you simply have to click the run button as pictured in the workbench toolbar. It is called coverage mode and works exactly like the existing Run and Debug modes.
+
+<h3>After Running EclEmma</h1>
+<p align="center"><img src="https://i.postimg.cc/3xjnHMbF/Test-Coverage-Before.png" width="500" height="250"></p>
+
+Once EclEmma is run you'll see the code that is covered by the tests in percentage terms. 
+
+<h3>After Refactoring Code</h1>
+<p align="center"><img src="https://i.postimg.cc/3xjnHMbF/Test-Coverage-Before.png" width="500" height="250"></p>
+
+After making the relevant changes to the code those percentages above would've increased. I had a problem cloning my work from Vs Code to eclipse so I had to manually re add the files to eclipse and then run EclEmma hence all the tests aren't there.
 
 # Team Version Control<a name = "tvc"></a>
 Github/Gitflow used as version control in this project 
