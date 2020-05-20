@@ -93,6 +93,26 @@ Test-driven development (TDD) is a software development process that relies on t
 # Test Coverage Metric<a name = "tcm"></a>
 
 # Team Version Control<a name = "tvc"></a>
+Github/Gitflow used as version control in this project 
+<h3>What is version control?</h3>
+Version control systems are a category of software tools that help a software team manage changes to source code over time. Version control software keeps track of every modification to the code in a special kind of database. If a mistake is made, developers can turn back the clock and compare earlier versions of the code to help fix the mistake while minimising disruption to all team members.
+
+<h3>My Branches</h3>
+
+- Master branch: Is the main head branch of the project. It contains all the code and documentation. All the other branches merge into this branch, only pull requests should be performed.
+
+- Documentation branch: The documentation branch contains several other branches such as the product backlog branch and the team-version control branch. The documentation branch will eventually merged back into the Master branch
+
+- Develop branch: The develop branch contains all the development code, the survey creation branch is also merged back into this branch.
+
+(Note I did encounter some problems with branching)
+<h3>Benefits of Version Control</h3>
+
+1. **History of files** A complete long-term change history of every file. Changes to files can include the creation and deletion of files as well as edits to their contents. Having the complete history enables going back to previous versions to help in root cause analysis for bugs and it is particularly crucial when needing to fic problems in older versions of software. 
+
+2. **Branching & Merging** Individuals working on their own can benefit from the ability to work on independent streams of changes. Creating a branch in GitHub keeps multiple streams of work independent from each other, whilst also offering the ability to merge the work back together. Branching is particularly useful when doing a team project as different people can work on different features and then integrate them together at the end.
+
+3. **Tracing** Being able to trace each change made to the software is particularly useful for identifying the root cause analysis of any bugs etc. Having the history of the code at your fingertips when your reading the code can significantly aid in understanding what a feature is doing and why it is doing it that way. Tracing could be particularly helpful if you were working with legacy code.
 
 # Code-review Checklist<a name = "coderev"></a>
 A code review is the process by which software developers examine each other’s code more mistakes, bugs and to estimate the overall quality of the code. Code reviews have been shown to accelerate the software development. 
