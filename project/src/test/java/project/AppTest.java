@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import org.junit.Test;
 
@@ -83,7 +84,7 @@ public class AppTest {
 		assertEquals("Value should = 2", 2, one.getResponse().getAnswer());
     }
     
-    //Testing to ensure answer value is between 1-5
+    //Testing to ensure answer value is between 1-5 
 	@Test
 	public void responseValue()
 	{
@@ -96,5 +97,28 @@ public class AppTest {
 
 		sr.setAnswer(9);
 		assertEquals("Passing a value greater than 1-5 so that 0 is returned", 0, sr.getAnswer());
+    }
+    
+    //Testing to ensure survey responses will gathered from survey 
+	@Test
+	public void surveyResponse()
+	{
+		Survey surv = new Survey();
+
+		Question first = new Question("Food Liked");
+		Question second = new Question("Chips");
+
+		first.getResponse().setAnswer(2);
+		second.getResponse().setAnswer(3);
+		//Adding Q's to survey
+		surv.add(first);
+		surv.add(second);
+
+		//exepected arralyist being returned
+		ArrayList<Integer> returns = new ArrayList<Integer>(Arrays.asList(2,3));
+
+		//Test to ensure the reponse lists match
+		assertEquals("ArrayList should equal [2, 3]", returns,surv.getResponses());
+
 	}
 }
